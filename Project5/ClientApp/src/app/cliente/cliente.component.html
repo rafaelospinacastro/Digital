@@ -1,0 +1,52 @@
+<h1>Cliente</h1>
+
+<dx-data-grid
+    [dataSource]="dataSource"
+    [remoteOperations]="true"> 
+    <dxo-editing 
+        [allowAdding]="true" 
+        [allowUpdating]="true" 
+        [allowDeleting]="true" 
+    ></dxo-editing> 
+
+    <dxi-column
+        dataField="id"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="nombres"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="apellidos"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="identificacion"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="celular"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="email"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="edad"
+        dataType="number">
+    </dxi-column>
+
+    <dxi-column
+        dataField="fechaNacimiento"
+        dataType="date">
+    </dxi-column>
+
+</dx-data-grid>

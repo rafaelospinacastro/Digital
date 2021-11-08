@@ -1,0 +1,37 @@
+<h1>Compra</h1>
+
+<dx-data-grid
+    [dataSource]="dataSource"
+    [remoteOperations]="true"> 
+    <dxo-editing 
+        [allowAdding]="true" 
+        [allowUpdating]="true" 
+        [allowDeleting]="true" 
+    ></dxo-editing> 
+
+    <dxi-column
+        dataField="id"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="idCliente"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="valorTotal"
+        dataType="number">
+    </dxi-column>
+
+    <dxi-column
+        dataField="fecha"
+        dataType="date">
+    </dxi-column>
+
+    <dxi-column
+        dataField="usuario"
+        dataType="string">
+    </dxi-column>
+
+</dx-data-grid>

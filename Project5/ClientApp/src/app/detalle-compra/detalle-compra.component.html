@@ -1,0 +1,37 @@
+<h1>DetalleCompra</h1>
+
+<dx-data-grid
+    [dataSource]="dataSource"
+    [remoteOperations]="true"> 
+    <dxo-editing 
+        [allowAdding]="true" 
+        [allowUpdating]="true" 
+        [allowDeleting]="true" 
+    ></dxo-editing> 
+
+    <dxi-column
+        dataField="id"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="idCompra"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="idProducto"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="cantidad"
+        dataType="number">
+    </dxi-column>
+
+    <dxi-column
+        dataField="valorProducto"
+        dataType="number">
+    </dxi-column>
+
+</dx-data-grid>

@@ -1,0 +1,47 @@
+<h1>Producto</h1>
+
+<dx-data-grid
+    [dataSource]="dataSource"
+    [remoteOperations]="true"> 
+    <dxo-editing 
+        [allowAdding]="true" 
+        [allowUpdating]="true" 
+        [allowDeleting]="true" 
+    ></dxo-editing> 
+
+    <dxi-column
+        dataField="id"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="nombre"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="sigla"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="codigo"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="descripcion"
+        dataType="string">
+    </dxi-column>
+
+    <dxi-column
+        dataField="cantidad"
+        dataType="number">
+    </dxi-column>
+
+    <dxi-column
+        dataField="precioActual"
+        dataType="number">
+    </dxi-column>
+
+</dx-data-grid>
