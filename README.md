@@ -14,10 +14,10 @@ Se creó una base de datos en SQL Server 15, con el nombre de **Facturacion**
  
 Dentro de la base de datos se crearon 4 tablas:
 
-- Cliente: E
-- Compra
-- DetalleCompra
-- Producto
+- Cliente: En esta tabla encontrada los datos básicos del cliente
+- Compra: Contiene los datos generales de la compra
+- DetalleCompra: Contiene el detalle de los productos comprados
+- Producto: Contiene los datos básicos de los productos
 
 
 
