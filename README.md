@@ -19,7 +19,41 @@ Dentro de la base de datos se crearon 4 tablas:
 - DetalleCompra: Contiene el detalle de los productos comprados
 - Producto: Contiene los datos básicos de los productos
 
+La tabla **Cliente** tiene los siguientes datos:
+- Id: Esta es la llave primaria de la tabla, se creó una regla para que se generara de forma automática. Se usa un tipo de dato uniqueidentifier(Guid) para más seguridad en las claves primarias.
+- Nombres: Nombres del cliente
+- Apellidos: Apellidos del cliente
+- Identificacion (Numero del documento de identidad, ya que esta en texto soporta puntos(.), comas(,) o Letras como es el caso de los pasaportes
+- Celular: número de celular del cliente (esta en texto por lo cual soporta indicativos o caracteres especiales)
+- Email: correo electrónico del cliente
+- Edad: edad en numero del cliente (valor entero)
+- FechaNacimiento: fecha de nacimiento (dd/mm/aaaa) del cliente
 
+La tabla **Compra** tiene los siguientes datos:
+- Id: Esta es la llave primaria de la tabla, se creó una regla para que se generara de forma automática. Se usa un tipo de dato uniqueidentifier(Guid) para más seguridad en las 
+- IdCliente: es el id correspondiente del cliente que se encuentra en la tabla Cliente
+- ValorTotal: contiene el valor total de la compra
+- Fecha: fecha de la compra
+- Usuario: Usuario que expidio o fue el asesora en la compra por parte del cliente
+
+La tabla **DetalleCompra** tiene los siguientes datos:
+- Id: Esta es la llave primaria de la tabla, se creó una regla para que se generara de forma automática. Se usa un tipo de dato uniqueidentifier(Guid) para más seguridad en las 
+- IdCompra: es el id correspondiente de la compra que se encuentra en la tabla Compra
+- IdProducto: es el id correspondiente del producto que se encuentra en la tabla Producto
+- Cantidad: cantidad en unidades del producto comprado
+- ValorProducto: contiene el valor total para ese producto
+
+La tabla **Producto** tiene los siguientes datos:
+- Id: Esta es la llave primaria de la tabla, se creó una regla para que se generara de forma automática. Se usa un tipo de dato uniqueidentifier(Guid) para más seguridad en las 
+- Nombre: nombre con el cual es facil de buscar el producto tal como papa, carne, etc
+- Sigla: es un codigo corto 
+- Codigo: es un codigo con el que se desea identificar el producto, se puede utilizar un nombre corto
+- Descripcion. es una descripcion general del producto
+- Cantidad: es el stock actual del producto
+- PrecioActual: es el precio actual del producto, a lo cual se puede vender
+- IdProducto: es el id correspondiente del producto que se encuentra en la tabla Producto
+- Cantidad: cantidad en unidades del producto comprado
+- ValorProducto: contiene el valor total para ese producto
 
 ## Tecnologías Utilizadas
 En este producto utilizo las siguientes tecnologías:
