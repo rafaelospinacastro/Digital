@@ -1,48 +1,9 @@
-import { NgModule, Component, enableProdMode } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
-import { DxTabsModule, DxSelectBoxModule } from 'devextreme-angular';
-
-import { Tab, Longtab, Service } from './app.service';
-
-if (!/localhost/.test(document.location.host)) {
-  enableProdMode();
-}
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'demo-app',
-  templateUrl: 'app/app.component.html',
-  styleUrls: ['app/app.component.css'],
-  providers: [Service],
+  selector: 'app-root',
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  longtabs: Longtab[];
-
-  tabs: Tab[];
-
-  tabContent: string;
-
-  constructor(service: Service) {
-    this.longtabs = service.getLongtabs();
-    this.tabs = service.getTabs();
-    this.tabContent = this.tabs[0].content;
-  }
-
-  selectTab(e) {
-    this.tabContent = this.tabs[e.itemIndex].content;
-  }
+  title = 'app';
 }
-
-@NgModule({
-  imports: [
-    BrowserModule,
-    DxTabsModule,
-    DxSelectBoxModule,
-  ],
-  declarations: [AppComponent],
-  bootstrap: [AppComponent],
-})
-export class AppModule { }
-
-platformBrowserDynamic().bootstrapModule(AppModule);

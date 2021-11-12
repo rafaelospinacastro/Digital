@@ -24,9 +24,12 @@
               [routerLinkActive]="['link-active']"
               [routerLinkActiveOptions]="{ exact: true }">
             <a class="nav-link text-dark" [routerLink]="['/']">Inicio</a>
+          </li>          
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/cliente']">Listado de Clientes</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/cliente']">Cliente</a>
+            <a class="nav-link text-dark" [routerLink]="['/crearcliente']">Crear Cliente</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
             <a class="nav-link text-dark" [routerLink]="['/producto']">Producto</a>

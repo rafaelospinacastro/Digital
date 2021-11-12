@@ -1,0 +1,37 @@
+<h1>Crear Cliente</h1>
+<dx-form colCount="auto">
+
+  <dxi-item itemType="group" caption="">
+
+    <dxi-item dataField="Nombres">
+    </dxi-item>
+
+    <dxi-item dataField="Apellidos">
+    </dxi-item>
+
+    <dxi-item dataField="Identificacion">
+      <dxi-validation-rule type="required"
+                           message="La identificacion es requerida"></dxi-validation-rule>
+    </dxi-item>
+
+    <dxi-item dataField="Celular">
+    </dxi-item>
+
+    <dxi-item dataField="Email">
+    </dxi-item>
+
+    <dxi-item dataField="Edad">
+    </dxi-item>
+
+    <dxi-item dataField="FechaNacimiento"
+              editorType="dxDateBox">
+    </dxi-item>
+    <dxi-item itemType="button"
+              horizontalAlignment="left"
+              [buttonOptions]="buttonOptions"
+              title="Guardar"> Guardar
+    </dxi-item>
+
+  </dxi-item>
+  
+</dx-form>

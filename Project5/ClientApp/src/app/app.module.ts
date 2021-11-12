@@ -9,11 +9,12 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { DxDataGridModule } from 'devextreme-angular';
+import { DxDataGridModule, DxFormModule } from 'devextreme-angular';
 import { ProductoComponent } from './producto/producto.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { CompraComponent } from './compra/compra.component';
 import { DetalleCompraComponent } from './detalle-compra/detalle-compra.component';
+import { CrearclienteComponent } from './crearcliente/crearcliente.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DetalleCompraComponent } from './detalle-compra/detalle-compra.componen
     ProductoComponent,
     ClienteComponent,
     CompraComponent,
-    DetalleCompraComponent
+    DetalleCompraComponent,
+    CrearclienteComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -39,8 +41,10 @@ import { DetalleCompraComponent } from './detalle-compra/detalle-compra.componen
       { path: 'producto', component: ProductoComponent },
       { path: 'compra', component: CompraComponent },
       { path: 'detalle-compra', component: DetalleCompraComponent },
+      { path: 'crearcliente', component: CrearclienteComponent },
     ]),
-    DxDataGridModule
+    DxDataGridModule,
+    DxFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

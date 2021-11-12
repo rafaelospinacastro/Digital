@@ -22,14 +22,14 @@ namespace Facturacion.Core.Handlers.CommandHandlers
         }
         public async Task<ClienteResponse> Handle(CreateClienteCommand request, CancellationToken cancellationToken)
         {
-            var employeeEntitiy = ClienteMapper.Mapper.Map<Cliente>(request);
-            if (employeeEntitiy is null)
+            var clienteEntitiy = ClienteMapper.Mapper.Map<Cliente>(request);
+            if (clienteEntitiy is null)
             {
                 throw new ApplicationException("Problema en el mapeo");
             }
-            var newEmployee = await _clienteRepo.AddAsync(employeeEntitiy);
-            var employeeResponse = ClienteMapper.Mapper.Map<ClienteResponse>(newEmployee);
-            return employeeResponse;
+            var newCliente = await _clienteRepo.AddAsync(clienteEntitiy);
+            var clienteResponse = ClienteMapper.Mapper.Map<ClienteResponse>(newCliente);
+            return clienteResponse;
         }
     }
 }
