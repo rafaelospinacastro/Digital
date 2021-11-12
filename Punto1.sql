@@ -194,3 +194,21 @@ GO
 ALTER TABLE [dbo].[Producto] ADD  DEFAULT (newid()) FOR [Id]
 GO
 
+/****** PUNTO 1 ---- CONSULTAS ******/
+
+------PUNTO 1------------
+select [Nombre], [PrecioActual] from [dbo].[Producto]
+------PUNTO 2------------
+select Nombre, Codigo, Descripcion from [dbo].[Producto] where [Cantidad] <= 5
+------PUNTO 3------------
+select Cliente.* from Cliente inner join Compra on
+Cliente.[Id] = Compra.[IdCliente]
+where [Edad] <= 35 and [Fecha] between '2000-02-01' and '2000-05-25'
+------PUNTO 4------------
+select [Nombre], sum(DC.[Cantidad] * DC.[ValorProducto])
+from dbo.[DetalleCompra] DC inner join [dbo].[Compra] C on
+DC.[IdCompra] = C.[Id] 
+inner join [dbo].[Producto] P on
+DC.[IdProducto] = P.Id
+where C.[Fecha] between '2000-01-01' and '2000-12-31'
+group by [Nombre]
