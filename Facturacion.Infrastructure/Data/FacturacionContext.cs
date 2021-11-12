@@ -1,12 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Facturacion.Core.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Facturacion.Core.Entities;
 
-namespace Facturacion.Core.Data
+namespace Facturacion.Infrastructure.Data
 {
     public class FacturacionContext : DbContext
     {

@@ -10,8 +10,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
-using Facturacion.Core.Data;
 using Facturacion.Core;
+using Facturacion.Infrastructure.Data;
+using Facturacion.Core.Entities;
 
 namespace Project5.Controllers
 {

@@ -1,4 +1,5 @@
-﻿using Facturacion.Core.Data;
+﻿using Facturacion.Core.Repositories.Base;
+using Facturacion.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Facturacion.Core.Repositories.Base
+namespace Facturacion.Infrastructure.Repositories.Base
 {
     public class Repository<T> : IRepository<T> where T : class
     {

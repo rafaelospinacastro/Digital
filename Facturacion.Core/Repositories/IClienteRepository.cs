@@ -1,4 +1,5 @@
 ﻿using Facturacion.Core.Repositories.Base;
+using Facturacion.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
